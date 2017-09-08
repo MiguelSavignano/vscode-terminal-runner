@@ -3,8 +3,9 @@ import * as vscode from 'vscode'
 const TERMINAL_NAME = 'Terminal Runner'
 
 class TerminalRunner{
+  activeTerminal;
   constructor(){
-    this.activeTerminal = undefined
+    this.activeTerminal = undefined;
     vscode.window.onDidCloseTerminal(this.deleteTerminal.bind(this))
   }
 
