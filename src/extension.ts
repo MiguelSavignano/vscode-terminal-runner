@@ -4,7 +4,7 @@ import terminalRunner from './terminal'
 
 export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "terminal-runner" is now active!');
-  let disposable = vscode.commands.registerCommand('extension.terminalRunner', () => {
+  let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
     terminalRunner.executeInTerminal(getCommandText())
   });
   context.subscriptions.push(disposable);

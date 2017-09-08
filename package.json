@@ -17,8 +17,8 @@
     "contributes": {
         "commands": [
             {
-                "command": "extension.terminalRunner",
-                "title": "Terminal: run command"
+                "command": "extension.sayHello",
+                "title": "Hello World"
             }
         ]
     },
