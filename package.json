@@ -17,10 +17,20 @@
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "extension.terminalRunner",
+                "title": "Terminal: run command"
             }
         ]
+    },
+    "configuration": {
+      "title": "Terminal Runner Configurations",
+      "properties": {
+        "terminalRunner.runCommand": {
+          "type": "string",
+          "default": "echo 'Hello you can run any command in the terminal'",
+          "description": "You can Define a command"
+        }
+      }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
