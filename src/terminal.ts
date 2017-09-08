@@ -5,7 +5,7 @@ const TERMINAL_NAME = 'Terminal Runner'
 class TerminalRunner{
   constructor(){
     this.activeTerminal = undefined
-    vscode.window.onDidCloseTerminal(this.deleteTerminal)
+    vscode.window.onDidCloseTerminal(this.deleteTerminal.bind(this))
   }
 
   getTerminal(){
@@ -15,7 +15,7 @@ class TerminalRunner{
 
   deleteTerminal(terminalInstance: vscode.Terminal){
     if (terminalInstance.name == TERMINAL_NAME) {
-      activeTerminal = undefined
+      this.activeTerminal = undefined
     }
   }
 
