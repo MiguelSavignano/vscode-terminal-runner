@@ -1,7 +1,7 @@
 {
   "name": "terminal-runner",
   "displayName": "terminal-runner",
-  "description": "",
+  "description": "Run any command in the vscode terminal",
   "version": "0.0.1",
   "publisher": "miguelsavignano",
   "engines": {
@@ -14,6 +14,11 @@
     "onCommand:extension.terminalRunner"
   ],
   "main": "./out/src/extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MiguelSavignano/terminal-runner-vscode"
+  },
+  "homepage": "https://github.com/MiguelSavignano/terminal-runner-vscode",
   "contributes": {
     "commands": [
       {
