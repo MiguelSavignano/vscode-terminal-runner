@@ -1,12 +1,26 @@
 # terminal-runner README
 
-This is the README for your extension "terminal-runner". After writing up a brief description, we recommend including the following sections.
+Terminal runner help you to run a command in the visual code terminal
+This extension it's you need run the same command in the terminal repeatedly like run specs, linters,
+
+## Add default command
+open you visual code settings and add this line
+"terminalRunner.runCommand": "echo 'You can run any command'",
+
+Example:
+"terminalRunner.runCommand": "npm build",
+"terminalRunner.runCommand": "rails test && rubocop -a",
+"terminalRunner.runCommand": "crystal spec",
+"terminalRunner.runCommand": "git push origin master",
+"terminalRunner.runCommand": "./my-custom-script.sh",
+
+default keybinding
+mac: cmd+shift+r
+window-linux: ctrl+shift+r
 
 ## Features
+Run command in the same terminal, use settings to set the command that will be run
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
 
 \!\[feature X\]\(images/feature-x.png\)
 
@@ -24,8 +38,7 @@ For example:
 
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+* `terminalRunner.runCommand`: ""
 
 ## Known Issues
 
