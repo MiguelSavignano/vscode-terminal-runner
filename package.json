@@ -3,7 +3,7 @@
   "displayName": "terminal-runner",
   "description": "Run any command in the vscode terminal",
   "version": "0.0.1",
-  "publisher": "miguelsavignano",
+  "publisher": "miguel-savignano",
   "engines": {
     "vscode": "^1.15.0"
   },
