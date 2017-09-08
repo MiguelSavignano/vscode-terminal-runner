@@ -1,49 +1,55 @@
 {
-    "name": "terminal-runner",
-    "displayName": "terminal-runner",
-    "description": "",
-    "version": "0.0.1",
-    "publisher": "miguelsavignano",
-    "engines": {
-        "vscode": "^1.15.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCommand:extension.terminalRunner"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "extension.terminalRunner",
-                "title": "Terminal: run command"
-            }
-        ]
-    },
-    "configuration": {
-      "title": "Terminal Runner Configurations",
-      "properties": {
-        "terminalRunner.runCommand": {
-          "type": "string",
-          "default": "echo 'you can run any command in the terminal'",
-          "description": "You can Define a command"
-        }
+  "name": "terminal-runner",
+  "displayName": "terminal-runner",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "miguelsavignano",
+  "engines": {
+    "vscode": "^1.15.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.terminalRunner"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.terminalRunner",
+        "title": "Terminal: run command"
       }
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.5.2",
-        "vscode": "^1.1.5",
-        "mocha": "^3.5.0",
-        "@types/node": "^7.0.43",
-        "@types/mocha": "^2.2.42"
+    ]
+  },
+  "keybindings":[
+    {
+      "command": "extension.terminalRunner",
+      "key": "cmd+shift+r"
     }
+  ],
+  "configuration": {
+    "title": "Terminal Runner Configurations",
+    "properties": {
+      "terminalRunner.runCommand": {
+        "type": "string",
+        "default": "echo 'you can run any command in the terminal'",
+        "description": "You can Define a command"
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.5.2",
+    "vscode": "^1.1.5",
+    "mocha": "^3.5.0",
+    "@types/node": "^7.0.43",
+    "@types/mocha": "^2.2.42"
+  }
 }
