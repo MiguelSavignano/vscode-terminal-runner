@@ -30,7 +30,9 @@
   "keybindings":[
     {
       "command": "extension.terminalRunner",
-      "key": "ctrl+shift+r"
+      "key": "ctrl+shift+r",
+      "mac": "cmd+shift+r",
+      "when": "editorTextFocus"
     }
   ],
   "configuration": {
