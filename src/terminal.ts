@@ -2,14 +2,21 @@
 import * as vscode from 'vscode'
 const TERMINAL_NAME = 'Terminal Runner'
 
-// vscode.window.onDidCloseTerminal((terminal: vscode.Terminal) => {
-//   if (activeTerminals[terminal.name]) {
-//     delete activeTerminals[terminal.name];
-//   }
-// });
 class TerminalRunner{
+  constructor(){
+    this.activeTerminal = undefined
+    vscode.window.onDidCloseTerminal(this.deleteTerminal)
+  }
+
   getTerminal(){
-    return vscode.window.createTerminal(TERMINAL_NAME)
+    this.activeTerminal = this.activeTerminal || vscode.window.createTerminal(TERMINAL_NAME)
+    return this.activeTerminal
+  }
+
+  deleteTerminal(terminalInstance: vscode.Terminal){
+    if (terminalInstance.name == TERMINAL_NAME) {
+      activeTerminal = undefined
+    }
   }
 
   executeInTerminal(commandText, options = {}) {

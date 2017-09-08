@@ -25,7 +25,7 @@
   "keybindings":[
     {
       "command": "extension.terminalRunner",
-      "key": "cmd+shift+r"
+      "key": "ctrl+shift+r"
     }
   ],
   "configuration": {
