@@ -1,78 +1,47 @@
-# terminal-runner README
+# Terminal runner README
 
-Terminal runner help you to run a command in the visual code terminal
-This extension it's you need run the same command in the terminal repeatedly like run specs, linters,
+Terminal runner help you to run a command in the visual code terminal.
 
-## Add default command
-open you visual code settings and add this line
-"terminalRunner.runCommand": "echo 'You can run any command'",
+This extension it's you need run the same command in the terminal repeatedly like run specs, linters, build or any script.
 
-Example:
+## Usage
+
+### Add default command
+Open you visual code settings and add this line
+```json
+"terminalRunner.runCommand": "",
+```
+Examples:
+```json
 "terminalRunner.runCommand": "npm build",
+```
+```json
 "terminalRunner.runCommand": "rails test && rubocop -a",
+```
+```json
 "terminalRunner.runCommand": "crystal spec",
+```
+```json
 "terminalRunner.runCommand": "git push origin master",
+```
+```json
 "terminalRunner.runCommand": "./my-custom-script.sh",
+```
+### Run default command
+```json
+Terminal: run command
+```
 
-default keybinding
-mac: cmd+shift+r
-window-linux: ctrl+shift+r
+## Default keybinding
+
+* mac: cmd+shift+r
+* window-linux: ctrl+shift+r
 
 ## Features
-Run command in the same terminal, use settings to set the command that will be run
+* Run command in the same terminal, use settings to set the command that will be run
 
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `terminalRunner.runCommand`: ""
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+### 0.0.1
+Run command in the same terminal, use settings to set the command that will be run

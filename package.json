@@ -1,6 +1,6 @@
 {
   "name": "terminal-runner",
-  "displayName": "terminal-runner",
+  "displayName": "Terminal runner",
   "description": "Run any command in the vscode terminal",
   "version": "0.0.1",
   "publisher": "miguel-savignano",
