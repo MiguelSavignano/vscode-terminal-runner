@@ -2,7 +2,7 @@
   "name": "terminal-runner",
   "displayName": "Terminal runner",
   "description": "Run any command in the vscode terminal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "miguel-savignano",
   "engines": {
     "vscode": "^1.15.0"
@@ -46,6 +46,7 @@
     }
   },
   "scripts": {
+    "publish": "vsce publish",
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
